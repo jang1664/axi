@@ -173,6 +173,7 @@ endmodule
 
 module axi_xbar_intf
 import cf_math_pkg::idx_width;
+import axi_pkg::*;
 #(
   parameter int unsigned AXI_USER_WIDTH =  0,
   parameter axi_pkg::xbar_cfg_t Cfg     = '{8,8,2,2,0,CUT_ALL_AX,0,3,3,1,32,1024,1},
