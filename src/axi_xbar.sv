@@ -175,8 +175,8 @@ module axi_xbar_intf
 import cf_math_pkg::idx_width;
 #(
   parameter int unsigned AXI_USER_WIDTH =  0,
-  parameter axi_pkg::xbar_cfg_t Cfg     = '0,
-  parameter bit ATOPS                   = 1'b1,
+  parameter axi_pkg::xbar_cfg_t Cfg     = '{8,8,2,2,0,CUT_ALL_AX,0,3,3,1,32,1024,1},
+  parameter bit ATOPS                   = 1'b0,
   parameter bit [Cfg.NoSlvPorts-1:0][Cfg.NoMstPorts-1:0] CONNECTIVITY = '1,
   parameter type rule_t                 = axi_pkg::xbar_rule_64_t,
   localparam int unsigned MstPortsIdxWidth =
